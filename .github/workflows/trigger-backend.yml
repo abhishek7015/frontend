@@ -13,5 +13,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.REPO2_TOKEN }}
-          repository: your-username/backend
+          repository: abhishek7015/backend
           event-type: start-build
