@@ -1,0 +1,17 @@
+name: Trigger Backend Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger backend workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: abhishek7015/backend
+          event-type: deploy-backend
